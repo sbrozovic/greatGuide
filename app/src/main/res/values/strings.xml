@@ -1,0 +1,67 @@
+<resources>
+    <string name="app_name">The Great Guide</string>
+    <string name="tesla">tesla</string>
+    <string name="onboarding_next">Next</string>
+    <string name="onboarding_skip">Skip</string>
+    <string name="onboarding_go">Go</string>
+    <string name="welcome_to_guide">Welcome to \nThe GreatGuide!</string>
+    <string name="welcome_description">Discover cities through footsteps of Nikola Tesla, great scientist, inventor and
+        man who changed the world.
+    </string>
+    <string name="travel_through_timeline">Travel through the \ntimeline.</string>
+    <string name="travel_description">Learn about cities that Tesla has influenced in his lifetime. Pick a city and
+        start your adventure!
+    </string>
+    <string name="explore_the_city">Explore the city \n through brief stories.</string>
+    <string name="explore_description">By choosing a location in the city you can learn more about it and Tesla\'s
+        life.
+    </string>
+    <string name="cities_next">Next</string>
+    <string name="cities_previous">Previous</string>
+    <string name="cities_visit">Visit</string>
+    <string name="about_location">About location</string>
+    <string name="secret_title">Here you can save your secret so Edison can not steal it from you.</string>
+    <string name="secret_disclaimer">You can save only one secret. If you already have a secret it will be overwritten
+        with new one.
+    </string>
+
+    <!--Acknowledgments-->
+    <string name="go_to_acknowledgements">Go to acknowledgements</string>
+    <string name="acknowledgements">Acknowledgements</string>
+    <string name="fer">Faculty of Electrical Engineering and Computing</string>
+    <string name="icent">Innovation Centre Nikola Tesla</string>
+    <string name="tesla_association">The Nikola Tesla Association</string>
+    <string name="design_study">Faculty of Architecture \nSchool of Design</string>
+    <string name="mobile_development">Mobile development</string>
+    <string name="app_design">Application design</string>
+    <string name="content">Content</string>
+
+    <string name="play">PLAY</string>
+
+    <string name="secret_hint">Enter your new secret...</string>
+    <string name="old_secret_button">View old secret</string>
+    <string name="save_secret_button">Save new secret</string>
+    <string name="save_alert_title">Save secret</string>
+    <string name="save_alert_description">Are you sure you want to save this secret?</string>
+    <string name="enter_password">Enter password</string>
+    <string name="message_password_first_time">Enter password that will be used for keeping secrets. \\nNote: Remember it for later. </string>
+    <string name="message_password_default">Enter the password that you entered the first time.</string>
+    <string name="done">Done</string>
+    <string name="yes">Yes</string>
+    <string name="cancel">Cancel</string>
+
+    <!--Fonts-->
+    <string name="font_montserrat_regular">fonts/Montserrat-Regular.ttf</string>
+    <string name="font_montserrat_italic">fonts/Montserrat-Italic.ttf</string>
+    <string name="font_montserrat_alternates_regular">fonts/MontserratAlternates-Regular.ttf</string>
+    <string name="font_montserrat_alternates_bold">fonts/MontserratAlternatesBold.ttf</string>
+    <string name="font_montserrat_alternates_italic">fonts/MontserratAlternates-Italic.ttf</string>
+    <string name="font_montserrat_alternates_medium">fonts/MontserratAlternates-Medium.ttf</string>
+    <string name="title_activity_city_maps">Map</string>
+
+    <string name="permission_title">Permission request</string>
+    <string name="permission_location">Please provide location so you can see your location on maps</string>
+
+    <string name="generic_unknown_error">Something went wrong. Please try again later.</string>
+    <string name="generic_network_error">Please check your network connection and try again.</string>
+</resources>

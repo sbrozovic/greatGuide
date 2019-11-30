@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:background="@color/primaryBlue"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        tools:ignore="MissingPrefix">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+        <androidx.appcompat.widget.Toolbar
+                android:id="@+id/cityLocationToolbar"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                    android:id="@+id/closeButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_close"/>
+
+            <TextView
+                    android:id="@+id/toolbarTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingStart="24dp"
+                    android:textSize="20sp"
+                    android:textColor="@color/white"
+                    android:textAllCaps="true"
+                    fontPath="@string/font_montserrat_alternates_regular"
+                    android:text="@string/about_location"/>
+        </androidx.appcompat.widget.Toolbar>
+
+        <ImageView
+                android:id="@+id/locationImage"
+                android:layout_width="0dp"
+                android:layout_height="300dp"
+                android:scaleType="centerCrop"
+                tools:src="@drawable/ocean"
+                app:layout_constraintTop_toBottomOf="@+id/cityLocationToolbar"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"/>
+        <View android:layout_width="0dp"
+              android:layout_height="300dp"
+              android:background="@color/darkBlue"
+              android:alpha="0.5"
+              app:layout_constraintTop_toBottomOf="@+id/cityLocationToolbar"
+              app:layout_constraintStart_toStartOf="parent"
+              app:layout_constraintEnd_toEndOf="parent"/>
+        <!--opacity 50%-->
+
+        <TextView
+                android:id="@+id/locationName"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"
+                android:textSize="35sp"
+                android:lineSpacingExtra="5dp"
+                fontPath="@string/font_montserrat_alternates_bold"
+                tools:text="Faculty of electrical engineering and computing"
+                app:layout_constraintTop_toBottomOf="@+id/cityLocationToolbar"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginStart="24dp"
+                android:layout_marginEnd="24dp"
+                android:layout_marginTop="40dp"
+                android:layout_marginBottom="8dp"
+                app:layout_constraintBottom_toTopOf="@+id/locationAddress"
+                app:layout_constraintVertical_bias="0.0"/>
+        <TextView
+                android:id="@+id/locationAddress"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"
+                android:textSize="12sp"
+                tools:text="Unska ulica 3"
+                fontPath="@string/font_montserrat_alternates_regular"
+                app:layout_constraintTop_toBottomOf="@id/locationName"
+                android:layout_marginStart="24dp"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginTop="24dp"
+                app:layout_constraintVertical_bias="0.0"/>
+        <TextView
+                android:id="@+id/locationType"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/darkBlue"
+                android:background="@drawable/btn_rounded_yellow"
+                android:padding="4dp"
+                android:textSize="12sp"
+                android:paddingStart="16dp"
+                android:paddingEnd="16dp"
+                fontPath="@string/font_montserrat_alternates_regular"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintBottom_toBottomOf="@id/locationImage"
+                android:layout_marginStart="24dp"
+                android:layout_marginBottom="16dp"/>
+
+        <TextView
+                android:id="@+id/personsLocation"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/darkBlue"
+                android:background="@drawable/btn_rounded_yellow"
+                android:padding="4dp"
+                android:paddingStart="16dp"
+                android:paddingEnd="16dp"
+                android:textSize="12sp"
+                fontPath="@string/font_montserrat_alternates_regular"
+                app:layout_constraintStart_toEndOf="@id/locationType"
+                android:layout_marginStart="16dp"
+                app:layout_constraintBottom_toBottomOf="@+id/locationImage"
+                android:layout_marginBottom="16dp"/>
+
+        <TextView
+                android:id="@+id/city"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/darkBlue"
+                android:background="@drawable/btn_rounded_yellow"
+                android:textSize="12sp"
+                android:padding="4dp"
+                android:paddingStart="16dp"
+                android:paddingEnd="16dp"
+                fontPath="@string/font_montserrat_alternates_regular"
+                app:layout_constraintStart_toEndOf="@id/personsLocation"
+                android:layout_marginStart="16dp"
+                android:layout_marginBottom="16dp"
+                app:layout_constraintBottom_toBottomOf="@+id/locationImage"/>
+
+        <LinearLayout
+                android:id="@+id/descriptionLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintTop_toBottomOf="@id/locationImage"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintVertical_bias="0.0"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

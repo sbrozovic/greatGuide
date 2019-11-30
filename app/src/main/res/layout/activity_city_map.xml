@@ -1,0 +1,79 @@
+<androidx.constraintlayout.widget.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        xmlns:map="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:ignore="MissingPrefix">
+    <androidx.appcompat.widget.Toolbar
+            android:id="@+id/cityMapToolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/primaryBlue"
+            map:layout_constraintStart_toStartOf="parent"
+            map:layout_constraintEnd_toEndOf="parent"
+            map:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+                android:id="@+id/closeButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_close"/>
+
+        <TextView
+                android:id="@+id/toolbarTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingStart="24dp"
+                android:textSize="20sp"
+                android:textColor="@color/white"
+                android:textAllCaps="true"
+                fontPath="@string/font_montserrat_alternates_regular"/>
+    </androidx.appcompat.widget.Toolbar>
+    <fragment
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:id="@+id/map"
+            tools:context="hr.fer.teslasjourney.ui.city_map.CityMapActivity"
+            android:name="com.google.android.gms.maps.SupportMapFragment"
+            map:layout_constraintTop_toBottomOf="@id/cityMapToolbar"
+            map:layout_constraintStart_toStartOf="parent"
+            map:layout_constraintBottom_toBottomOf="parent"
+            map:layout_constraintEnd_toEndOf="parent"/>
+
+    <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="160dp"
+            map:layout_constraintBottom_toBottomOf="parent"
+            map:layout_constraintStart_toStartOf="parent"
+            map:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginBottom="32dp"
+            android:orientation="vertical"
+            android:elevation="3dp"
+            android:background="@drawable/background_white_rounded">
+
+        <com.rd.PageIndicatorView
+                android:layout_gravity="center"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                map:piv_animationType="worm"
+                map:piv_dynamicCount="true"
+                map:piv_radius="3dp"
+                android:paddingTop="16dp"
+                android:paddingStart="16dp"
+                map:piv_interactiveAnimation="true"
+                map:piv_selectedColor="@color/grey"
+                map:piv_unselectedColor="@color/lightGrey"
+                map:piv_viewPager="@id/locationsViewpager"/>
+
+        <androidx.viewpager.widget.ViewPager
+                android:id="@+id/locationsViewpager"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingTop="8dp"
+                android:background="@drawable/background_white_rounded"/>
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

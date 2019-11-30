@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/background_acknowledgement">
+    <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+        <ImageView
+                android:id="@+id/backButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_arrow_back_black"
+                android:padding="24dp"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"/>
+
+        <TextView
+                android:id="@+id/titleLabel"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="@string/acknowledgements"
+                style="@style/TitleStyle"
+                android:textColor="@color/darkBlue"
+                android:textSize="24sp"
+                android:layout_marginTop="16dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/backButton"/>
+
+        <LinearLayout
+                android:id="@+id/acknowledgmentsContainer"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginTop="16dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/titleLabel">
+            <include android:id="@+id/acknowledgementFER"
+                     layout="@layout/view_acknowledgment"/>
+            <include android:id="@+id/acknowledgementDesign"
+                     layout="@layout/view_acknowledgment"/>
+            <include android:id="@+id/acknowledgementICENT"
+                     layout="@layout/view_acknowledgment"/>
+            <include android:id="@+id/acknowledgementTeslaAssociation"
+                     layout="@layout/view_acknowledgment"/>
+        </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.core.widget.NestedScrollView>
